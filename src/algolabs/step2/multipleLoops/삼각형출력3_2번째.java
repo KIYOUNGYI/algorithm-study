@@ -1,4 +1,4 @@
-package algolabs.multipleLoops;
+package algolabs.step2.multipleLoops;
 
 import java.util.Scanner;
 
