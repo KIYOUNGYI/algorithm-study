@@ -18,7 +18,7 @@ reference: https://likispot.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%
 
 # What I Learned
 
-design algorithm & write codes
+problem solving skills
 
 1] Simulation(Brute Force)
 
