@@ -24,20 +24,20 @@ design algorithm & write codes
 
 1] Simulation(Brute Force)
 
-2] BFS,DFS
+2] BFS, DFS
 
 3] Basic Number Theory
 
 4] BackTracking(Recursion)
 
-5] Divide & Conquer,Memoization,Dynamic Programming
+5] Divide & Conquer, Memoization, Dynamic Programming
 
 6] Sorting Algorithm (merge,qucik etc)
 
 7] String
 
-8] Queue,Stack
+8] Queue, Stack
 
 9] Binary Search, Parametric Search
 
-10] Graph Algorithm(Dijkstra,Kruskal,SCT)
+10] Graph Algorithm(Dijkstra, Kruskal, SCT)
