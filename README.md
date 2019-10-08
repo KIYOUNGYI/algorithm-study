@@ -8,15 +8,11 @@ I used below web sites.
 
 2] https://swexpertacademy.com/ (Samsung Algorithm Website) 
 
-I practiced over and over again to solve those problems in proper time.
+I practiced multiple times to solve them to make sure that I can deal with them in a short time.
 
-Depend on problem difficulty, I tried to solve those problems from 5 minutes to 45 minutes.
+Most of the problems from Algorithmlabs website, I tried to solve each problem in less than 10 ~ 30 minutes.
 
-So I solved same questions over and over until I design the algorithm and do actual coding in proper time.
-
-Most of the problems from algorithmlabs, I tried to finish them in less than 10 ~ 30 minutes.
-
-Samsung Mock Exam test problems, I practiced them over and over to solve them in 30~45 minutes.
+Samsung Mock Exam test problems, I practiced them repeatedly to solve those problems in 30~45 minutes.
 
 reference: https://likispot.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
 
