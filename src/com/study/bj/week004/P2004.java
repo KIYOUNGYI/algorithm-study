@@ -1,9 +1,7 @@
-package com.study.bj.lec004;
-
-import java.util.Scanner;
+package com.study.bj.week004;
 
 /**
- * 17:34
+ * for-loop practice !!!!
  * 조합 0의 개수
  * https://www.acmicpc.net/problem/2004
  */

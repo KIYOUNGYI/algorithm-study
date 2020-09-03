@@ -1,4 +1,4 @@
-package com.study.bj.lec001;
+package com.study.bj.week001;
 
 import java.util.Scanner;
 

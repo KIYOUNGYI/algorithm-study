@@ -1,6 +1,4 @@
-package com.study.bj.lec004;
-
-import java.util.Scanner;
+package com.study.bj.week004;
 
 /**
  * https://www.acmicpc.net/problem/1676

@@ -1,6 +1,4 @@
-package com.study.bj.lec004;
-
-import java.util.Scanner;
+package com.study.bj.week004;
 
 /**
  * 팩토리얼
