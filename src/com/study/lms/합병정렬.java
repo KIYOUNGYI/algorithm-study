@@ -22,12 +22,16 @@ public class 합병정렬{
       mergeSort(0,n-1);
       
       // System.out.println(Arrays.toString(arr));
+//      for(int i=0;i<n;i++)
+//      {
+//        System.out.print(arr[i]+" ");
+//      }System.out.println();
       for(int i=0;i<n;i++)
       {
-        System.out.print(arr[i]+" ");
-      }System.out.println();
-      
-      
+        System.out.println(arr[i]);
+      }
+
+
       scan.close();
     }
     
