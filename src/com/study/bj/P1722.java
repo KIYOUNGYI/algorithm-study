@@ -2,6 +2,7 @@ package com.study.bj;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -10,117 +11,64 @@ import java.util.Scanner;
  */
 public class P1722
 {
-    static final int MAX = 21;
-    static int N;
-    static boolean[] visit=new boolean[MAX];
-    static int[] arr=new int[MAX];
-    static int[] temp=new int[MAX];
     static int cnt=0;
-    static int limit;
-    static boolean flag = false;
-    static int[] copied = new int[MAX];
-    static int case2=0;
+    static boolean[] visit = new boolean[22];
+    static int[] arr = new int[22];
+    static int N;
     public static void main(String[] args) throws IOException {
-
-        System.out.println((int)' ');
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        N = Integer.parseInt(br.readLine());
 
-        N = Integer.parseInt(bf.readLine());
-//        System.out.println(N);
-        String s = bf.readLine();
-        if(s.charAt(0)=='1')
+        String input = br.readLine();
+        if(input.charAt(0)=='2')
         {
-            limit = s.charAt(2)-48;
-
-            recursive(1);
-        }
-        else if(s.charAt(0)=='2')
-        {
-            recursive2(1);
-            int idx=1;
-            for(int i=2;i<s.length();i++)
+            String t1 = input.substring(2);
+            String[] t2 = t1.split(" ");
+            System.out.println("t2 :"+Arrays.asList(t2));
+            int[] t3 = new int[N];
+            System.out.println("t2 len:"+t2.length);
+            for(int i=0;i<t3.length;i++)
             {
-                int t = s.charAt(i);
-                if(t!=32)
-                {
-                    copied[idx++]=s.charAt(i)-48;
-                }
+                t3[i]=Integer.parseInt(t2[i]);
             }
-            recursive2(1);
+            recursive2(0);
+            System.out.println("!!");
         }
-        bw.close();
+        else
+        {
+
+        }
+
     }
 
     private static void recursive2(int depth)
     {
-        if(flag)return;
-
-        if(depth==N+1)
+        if(depth==N)
         {
-            case2+=1;
-
-            int x=0;
-            for(int i=1;i<=N;i++)
-            {
-                if(temp[i]==copied[i])x+=1;
-            }
-            if(x==N)
-            {
-                System.out.println(case2);
-                flag=false;
-            }
+            cnt+=1;
+//            printArr();
             return;
         }
 
         for(int i=1;i<=N;i++)
         {
-            if(visit[i]==false)
+            if(!visit[i])
             {
-                temp[depth]=i;
                 visit[i]=true;
+                arr[depth]=i;
                 recursive2(depth+1);
                 visit[i]=false;
             }
         }
     }
 
-    private static void recursive(int depth)
+    public static void printArr()
     {
-        if(flag)return;
-
-        if(depth==N+1)
+        for(int i=0;i<N;i++)
         {
-            cnt+=1;
-
-            if(cnt==limit)
-            {
-                for (int i = 1; i <= N; i++)
-                {
-                    System.out.print(temp[i]+" ");
-                }
-                System.out.println();
-                flag=true;
-            }
-            return;
+            System.out.print(arr[i]+" ");
         }
-
-        for(int i=1;i<=N;i++)
-        {
-            if(visit[i]==false)
-            {
-                temp[depth]=i;
-                visit[i]=true;
-                recursive(depth+1);
-                visit[i]=false;
-            }
-        }
+        System.out.println();
     }
 }
-//4
-//1 3
-//>>1 3 2 4
-//
-//4
-//2 1 3 2 4
-//>>3
