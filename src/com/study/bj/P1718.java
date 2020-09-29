@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
+/**
+ * 암호 [ 실패 ]
+ * https://www.acmicpc.net/problem/1718
+ */
 public class P1718
 {
 

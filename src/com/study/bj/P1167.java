@@ -4,10 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
 /**
+ * 시간초과...
  * [문제] -> 부모를 누구로 하느냐가 골때리네
  * ===============================
  * 트리의 지름이란, 트리에서 임의의 두 점 사이의 거리 중 가장 긴 것을 말한다. 트리의 지름을 구하는 프로그램을 작성하시오.
@@ -32,11 +31,15 @@ import java.util.StringTokenizer;
  */
 public class P1167
 {
+    static int answer=0;
     static int[] parent;
     static boolean[] visit;
     static ArrayList<Integer>[] adjacentList;
     static ArrayList<Integer>[] weight;
+    static int[] distance;
     static int node;
+    static int maxNode;
+    static int maxDistance;
     public static void main(String[] args) throws IOException
     {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -45,6 +48,7 @@ public class P1167
         weight = new ArrayList[node+1];
         visit = new boolean[node+1];
         parent = new int[node+1];
+        distance = new int[node+1];
         for(int i=0;i<=node;i++)
         {
             adjacentList[i] = new ArrayList<Integer>();
@@ -59,51 +63,99 @@ public class P1167
             {
                 arr[j]=Integer.parseInt(x[j]);
             }
-//            System.out.println(Arrays.toString(arr));
             int pivot = arr[0];
-//            System.out.println("pivot : " + arr[0]);
             for(int j=1;j<arr.length;j++)
             {
                 if(j%2==1)
                 {
                     adjacentList[pivot].add(arr[j]);
-//                    System.out.println("node : "+arr[j]);
                 }
                 else
                 {
                     weight[pivot].add(arr[j]);
-//                    System.out.println("weight : "+arr[j]);
                 }
             }
         }
-        for(int i=1;i<=node;i++) System.out.println(i+" : "+adjacentList[i].toString());
-        findRoot();
+
+//        for(int i=1;i<=node;i++)
+//        {
+//            System.out.println(i+" 와 연결된 녀석들 : "+adjacentList[i].toString());
+//        }
+        problem();
     }
 
-    private static void findRoot()
+    private static void problem()
     {
+        //여담으로 아무 점(v)에서 시작해서 가장 먼 점(v1)을 찾고, 그 점(v1)에서 가장 먼 점(v2)를 찾으면, v1과 v2 사이의 거리가 트리의 지름이됩니다.
+        //1번에서 가장 먼 점 -> 그 점에서 또 가장 먼 점 -> 두 개의 거리 합
+        //2번에서 가장 먼 점 -> 그 점에서 또 가장 먼 점 -> 두 개의 거리 합
+        //3번에서 가장 먼 점 -> 그 점에서 또 가장 먼 점 -> 두 개의 거리 합
+//        for(int i=1;i<=node;i++){}
+//        int std=1;
+//        visit[std]=true;
+//        System.out.println("----------------------");
+//        dfs(3);
+//        dfsWeight(3);
+//        System.out.println("3 에서 maxNode : " + maxNode+" maxDistance : "+maxDistance);
+
         for(int i=1;i<=node;i++)
         {
-            dfs(i);
+            dfsWeight(i);
+//            System.out.println(i+" 에서 maxNode : " + maxNode+" maxDistance : "+maxDistance);
+            int tempMaxNode = maxNode;int tempMaxDistance=maxDistance;
+
+            maxNode=0;maxDistance=0;
+            for(int j=0;j<=node;j++){visit[j]=false;distance[j]=0;}
+
+            dfsWeight(tempMaxNode);
+            int tempMaxDistance2 = maxDistance;
+
+            if(tempMaxDistance2>answer)answer=tempMaxDistance2;
+
+            maxNode=0;maxDistance=0;
+            for(int j=0;j<=node;j++){visit[j]=false;distance[j]=0;}
         }
-        System.out.println("parent");
-        for(int i=1;i<=node;i++)
-        {
-            System.out.println(i+" parent : "+ parent[i]);
-        }
+
+//        System.out.println("answer:"+answer);
+        System.out.println(answer);
     }
 
-    private static void dfs(int element)
+    public static void dfsWeight(int pivot)
     {
-        for(int i=0;i<adjacentList[element].size();i++)
+        visit[pivot]=true;
+//        System.out.println(pivot+" ");
+        for(int i=0;i<adjacentList[pivot].size();i++)
         {
-            int t = adjacentList[element].get(i);
-            if(!visit[t])
+            int std = adjacentList[pivot].get(i);
+            int dis = weight[pivot].get(i);
+            if(!visit[std])
             {
-                visit[t]=true;
-                parent[t]=element;
-                dfs(t);
+//                System.out.println("std : "+std+" "+"dis : "+dis);
+                distance[std]=distance[pivot]+dis;
+
+                if(distance[std]>maxDistance)
+                {
+                    maxNode=std;
+                    maxDistance=distance[std];
+                }
+
+                dfsWeight(std);
             }
         }
     }
+
+    public static void dfs(int pivot)
+    {
+        visit[pivot]=true;
+        System.out.print(pivot+" ");
+        for(int i=0;i<adjacentList[pivot].size();i++)
+        {
+            int std = adjacentList[pivot].get(i);
+            if(!visit[std])
+            {
+                dfs(std);
+            }
+        }
+    }
+
 }

@@ -1,13 +1,12 @@
-package com.study.bj.week001;
+package com.study.bj;
 
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class P2444 {
-    /**
-     * 5분
-     * n=5
-     * diamond
-     */
+
     static int n;
     static int[][] map;
 

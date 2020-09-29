@@ -1,9 +1,12 @@
-package com.study.bj.week001;
+package com.study.bj;
 
 
 import java.util.Scanner;
 
-//4분 10초
+/**
+ * 별 찍기 3
+ * https://www.acmicpc.net/problem/2440
+ */
 public class P2440
 {
     //두개의 합이 n 미만이면 출력,아니면 break
@@ -13,17 +16,13 @@ public class P2440
 
         int n = scan.nextInt();
 
-        for(int i=0;i<n;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if(i+j<n){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i + j < n) {
                     System.out.print("*");
+                } else {
+                    break;
                 }
-                else
-                    {
-                        break;
-                    }
             }
             System.out.println();
         }

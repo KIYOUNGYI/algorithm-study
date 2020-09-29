@@ -1,4 +1,4 @@
-package com.study.bj.week003;
+package com.study.bj;
 
 /**
  * 리모컨 (이건 좀 어렵)

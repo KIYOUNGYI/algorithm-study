@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * 순열의 순서
+ * 순열의 순서 [실패]
  * https://www.acmicpc.net/problem/1722
  */
 public class P1722

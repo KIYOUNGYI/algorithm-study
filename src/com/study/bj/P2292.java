@@ -5,7 +5,8 @@ import java.util.Scanner;
 /**
  * 벌집
  * https://www.acmicpc.net/problem/2292
- * 기존에 x같이 풀었네 내가 무슨 생각 갖고 풀었는지 좀 확인은 해볼 필요가 있다.
+ * 기존에 너무 뭐같이 풀었다.
+ * 과거엔 내가 무슨 생각 갖고 풀었는지 좀 확인은 해볼 필요가 있다.
  */
 public class P2292
 {

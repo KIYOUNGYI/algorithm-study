@@ -1,14 +1,10 @@
-package com.study.bj.week001;
+package com.study.bj;
 
 import java.util.Scanner;
 
 /**
- * 8분 걸림 (re)
- * *****
- * ****
- * ***
- * **
- * *
+ * 별 찍기 - 4
+ * https://www.acmicpc.net/problem/2441
  */
 public class P2441 {
     public static void main(String[] args) {

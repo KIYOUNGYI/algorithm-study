@@ -3,6 +3,10 @@ package com.study.bj;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * 외판원 순회 2
+ * https://www.acmicpc.net/problem/10971
+ */
 public class P10971
 {
     static int MINVal = Integer.MAX_VALUE;

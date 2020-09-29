@@ -2,6 +2,9 @@ package com.study.bj;
 
 import java.util.Scanner;
 
+/**
+ * 시간초과
+ */
 public class P3085
 {
   static int cnt2=0;
