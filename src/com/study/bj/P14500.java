@@ -3,58 +3,109 @@ package com.study.bj;
 import java.util.Scanner;
 
 /**
- * 테크로미노
- * https://www.acmicpc.net/problem/14500
- * 틀린풀이
+ * 테크로미노 https://www.acmicpc.net/problem/14500 틀린풀이
  */
 public class P14500 {
 
+  //aaaa
   static int[] dx1 = {0, 0, 0, 0};
   static int[] dy1 = {0, 1, 2, 3};
-
+  //a
+  //a
+  //a
+  //a
   static int[] dx2 = {0, 1, 2, 3};
   static int[] dy2 = {0, 0, 0, 0};
   //////////////////////////////////
-  static int[] dx3 = {0, 0, 1, 1};
+  // aa
+  //aa
+  static int[] dx3 = {0, 0, -1, -1};
   static int[] dy3 = {0, 1, 1, 2};
-
-  static int[] dx4 = {0, -1, -1, -2};
+  //a
+  //aa
+  // a
+  static int[] dx4 = {-1, 0, 0, 1};
   static int[] dy4 = {0, 0, 1, 1};
-
-//  static int[] dx5 = {0, 0, -1, -1};
-//  static int[] dy5 = {0, -1, -1, -2};
-//
-//  static int[] dx6 = {0, 1, 1, 2};
-//  static int[] dy6 = {0, 0, -1, -1};
+  //aa
+  // aa
+  static int[] dx5 = {0, 0, 1, 1};
+  static int[] dy5 = {-1, 0, 0, 1};
+  // a
+  //aa
+  //a
+  static int[] dx6 = {1, 0, 0, -1};
+  static int[] dy6 = {0, 0, 1, 1};
 
   //////////////////////////////////
+  //aa
+  //aa
   static int[] dx7 = {0, 0, 1, 1};
   static int[] dy7 = {0, 1, 0, 1};
   //////////////////////////////////
-
+  //aaa
+  //a
   static int[] dx8 = {0, 0, 0, 1};
   static int[] dy8 = {0, 1, 2, 0};
+  //a
+  //a
+  //aa
+  static int[] dx9 = {0, 1, 2, 2};
+  static int[] dy9 = {0, 0, 0, 1};
 
-  static int[] dx9 = {0, 0, 1, 2};
-  static int[] dy9 = {-1, 0, 0, 0};
-
-  static int[] dx10 = {0, 1, 1, 1};
-  static int[] dy10 = {0, 0, -1, -2};
-
-  static int[] dx11 = {0, 0, -1, -2};
-  static int[] dy11 = {1, 0, 0, 0};
+  //  a
+  //aaa
+  static int[] dx10 = {0, 0, 0, -1};
+  static int[] dy10 = {0, 1, 2, 2};
+  //aa
+  // a
+  // a
+  static int[] dx11 = {0, 0, 1, 2};
+  static int[] dy11 = {-1, 0, 0, 0};
   //////////////////////////////////////////
-  static int[] dx12 = {0, 0, 0, 1};
-  static int[] dy12 = {0, 1, 2, 1};
+  // a
+  //aaa
+  static int[] dx12 = {0, 0, 0, -1};
+  static int[] dy12 = {-1, 0, 1, 0};
+  // a
+  // aa
+  // a
+  static int[] dx13 = {-1, 0, 1, 0};
+  static int[] dy13 = {0, 0, 0, 1};
 
-  static int[] dx13 = {0, 1, 2, 1};
-  static int[] dy13 = {0, 0, 0, -1};
+  // aaa
+  //  a
+  static int[] dx14 = {0, 0, 0, 1};
+  static int[] dy14 = {-1, 0, 1, 0};
 
-  static int[] dx14 = {0, 0, 0, -1};
-  static int[] dy14 = {-2, -1, 0, -1};
+  // a
+  //aa
+  // a
+  static int[] dx15 = {-1, 0, 1, 0};
+  static int[] dy15 = {0, 0, 0, -1};
 
-  static int[] dx15 = {-2, -1, 0, -1};
-  static int[] dy15 = {0, 0, 0, 1};
+  // a
+  // a
+  //aa
+  static int[] dx16 = {0, 0, -1, -2};
+  static int[] dy16 = {0, 1, 1, 1};
+
+  //a
+  //aaa
+  static int[] dx17 = {0, 1, 1, 1};
+  static int[] dy17 = {0, 0, 1, 2};
+
+  //aa
+  //a
+  //a
+  static int[] dx18 = {0, 0, 1, 2};
+  static int[] dy18 = {0, 1, 0, 0};
+
+  //aaa
+  //  a
+  static int[] dx19 = {0, 0, 0, 1};
+  static int[] dy19 = {0, 1, 2, 2};
+
+
   /////////////////////////////////////////
   static int x, y;
   static int[][] arr;
@@ -75,8 +126,8 @@ public class P14500 {
     traverse(dx2, dy2);
     traverse(dx3, dy3);
     traverse(dx4, dy4);
-//    traverse(dx5, dy5);
-//    traverse(dx6, dy6);
+    traverse(dx5, dy5);
+    traverse(dx6, dy6);
     traverse(dx7, dy7);
     traverse(dx8, dy8);
     traverse(dx9, dy9);
@@ -86,6 +137,10 @@ public class P14500 {
     traverse(dx13, dy13);
     traverse(dx14, dy14);
     traverse(dx15, dy15);
+    traverse(dx16, dy16);
+    traverse(dx17, dy17);
+    traverse(dx18, dy18);
+    traverse(dx19, dy19);
 
     System.out.println(MAX);
   }
@@ -116,3 +171,40 @@ public class P14500 {
 
   }
 }
+/*
+ 4 4
+ 0 0 0 0
+ 0 0 0 1
+ 0 0 0 2
+ 0 0 4 3
+
+ 4 4
+0 0 0 0
+0 0 0 0
+0 1 0 0
+0 2 3 4
+
+4 4
+0 0 0 0
+0 0 2 1
+0 0 3 0
+0 0 4 0
+
+4 4
+0 0 0 0
+0 0 0 0
+0 1 2 3
+0 0 0 4
+
+4 4
+0 0 0 0
+0 0 1 0
+0 0 2 3
+0 0 0 4
+
+4 4
+0 0 0 0
+0 0 0 0
+0 0 3 4
+0 1 2 0
+ */
