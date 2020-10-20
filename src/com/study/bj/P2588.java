@@ -2,6 +2,10 @@ package com.study.bj;
 
 import java.util.Scanner;
 
+/**
+ * 곱샘
+ * https://www.acmicpc.net/problem/2588
+ */
 public class P2588 {
 
   public static void main(String[] args) {
