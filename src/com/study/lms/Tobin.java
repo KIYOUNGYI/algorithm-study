@@ -16,7 +16,6 @@ public class Tobin{
       StringBuilder sb = new StringBuilder();
       for(int i=0;i<n;i++)
       {
-        // System.out.print(arr[i]);
         sb.append(arr[i]);
       }
       System.out.println(sb.toString());

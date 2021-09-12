@@ -2,6 +2,7 @@ package com.study.bj;
 
 import java.util.Scanner;
 
+
 public class P1699 {
 
   static int[] arr;

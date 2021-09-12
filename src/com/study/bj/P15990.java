@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
 /**
  * 	1, 2, 3 더하기 5
@@ -40,7 +41,7 @@ public class P15990 {
     }
     if (sum == input) {
       cnt += 1;
-//      System.out.println(Arrays.toString(arr));
+      System.out.println(Arrays.toString(arr));
       return;
     }
     if (depth == 0) {
