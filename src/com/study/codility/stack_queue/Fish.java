@@ -3,11 +3,55 @@ package com.study.codility.stack_queue;
 import java.util.Stack;
 
 /**
- * https://app.codility.com/demo/results/trainingVNEXGR-J22/
+ * [인터넷 참조해서 푼 문제] -> 기억이 희석되면 다시 풀어봐야지
+ * <p>
+ * https://app.codility.com/demo/results/trainingA7D49U-GSF/
+ *
+ *
+ * <p>
+ * [wrong answer] https://app.codility.com/demo/results/trainingVNEXGR-J22/
  */
 public class Fish {
 
   public static int solution(int[] A, int[] B) {
+
+    Stack<Integer> stack = new Stack<>();
+
+    int upperCnt = 0;
+
+    for (int i = 0; i < A.length; i++) {
+
+      //하류행
+      if (B[i] == 1) {
+        stack.push(A[i]);
+
+      }
+      //상류행
+      else {
+
+        while (stack.size() > 0) {
+
+          if (stack.peek() > A[i]) {
+            break;
+          } else {
+            stack.pop();
+          }
+
+        }
+        //상류행
+        if (stack.size() == 0) {
+          upperCnt += 1;
+        }
+
+      }
+    }
+
+    //stack 크기가 하류 통과한 물고기 개수다.
+    return upperCnt + stack.size();
+  }
+
+
+  public static int solutionWrongAnswer(int[] A, int[] B) {
 
     Stack<Node> stack = new Stack<>();
 
@@ -46,7 +90,7 @@ public class Fish {
     int[] A = {10, 11, 8, 7, 6, 7, 15};
     int[] B = {1, 0, 0, 0, 0, 1, 0};
 
-    System.out.println(solution(A, B));
+    System.out.println(solutionWrongAnswer(A, B));
 
   }
 
