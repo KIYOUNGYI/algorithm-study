@@ -5,6 +5,9 @@ import java.util.Stack;
 /**
  * [인터넷 참조해서 푼 문제] -> 기억이 희석되면 다시 풀어봐야지
  * <p>
+ * https://yceffort.kr/2020/06/codility-07-02-fish
+ *
+ * <p>
  * https://app.codility.com/demo/results/trainingA7D49U-GSF/
  *
  *
